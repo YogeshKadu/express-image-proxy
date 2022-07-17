@@ -10,6 +10,9 @@ app.get('/*',async(req, res) => {
 	// res.json(req.params);
 	request.get(req.params["0"]).pipe(res);
 });
+app.get('/',async(req, res) => {
+	res.send("Hello");
+});
 
 app.listen(3200,()=> {
 	console.log("working");
